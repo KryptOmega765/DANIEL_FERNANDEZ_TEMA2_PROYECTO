@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>PokéNexo | Noticias y novedades</title>
+        <link>https://TU_USUARIO.github.io/TU_REPOSITORIO/</link>
+        <description>Novedades de PokéNexo, un proyecto educativo sobre videojuegos, cartas, mangas y merchandising de Pokémon.</description>
+        <language>es-ES</language>
+
+        <item>
+            <title>Bienvenidos a PokéNexo</title>
+            <link>https://TU_USUARIO.github.io/TU_REPOSITORIO/index.html</link>
+            <description>Presentamos PokéNexo, nuestra tienda ficticia dedicada al universo Pokémon y a sus diferentes productos.</description>
+            <pubDate>Mon, 16 Nov 2026 10:00:00 +0100</pubDate>
+            <guid isPermaLink="false">pokenexo-inicio-001</guid>
+        </item>
+
+        <item>
+            <title>Explora nuestro catálogo Pokémon</title>
+            <link>https://TU_USUARIO.github.io/TU_REPOSITORIO/catalogo.html</link>
+            <description>Consulta las categorías de videojuegos, cartas del Juego de Cartas Coleccionables, mangas y merchandising que mostramos en PokéNexo.</description>
+            <pubDate>Mon, 16 Nov 2026 11:00:00 +0100</pubDate>
+            <guid isPermaLink="false">pokenexo-catalogo-002</guid>
+        </item>
+
+        <item>
+            <title>Descubre nuestra sección de actualidad y guías</title>
+            <link>https://TU_USUARIO.github.io/TU_REPOSITORIO/actualidad.html</link>
+            <description>Visita la sección de actualidad y guías de PokéNexo para descubrir contenido informativo relacionado con la franquicia Pokémon.</description>
+            <pubDate>Mon, 16 Nov 2026 12:00:00 +0100</pubDate>
+            <guid isPermaLink="false">pokenexo-actualidad-003</guid>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéNexo | Contacto</title>
+    <meta name="description" content="Contacta con PokéNexo para resolver tus dudas sobre videojuegos, cartas, mangas y merchandising de Pokémon.">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="alternate" type="application/rss+xml" title="Noticias de PokéNexo" href="noticias.xml">
+</head>
+
+<body>
+    <header>
+        PokéNexo
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="actualidad.html">Actualidad y guías</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacta con PokéNexo</h1>
+
+        <p>
+            ¿Tienes alguna duda sobre nuestros productos?
+            ¿Buscas un videojuego, una carta o algún artículo
+            especial de Pokémon? ¡Estamos aquí para ayudarte!
+        </p>
+
+        <section>
+            <h2>Formulario de contacto</h2>
+
+            <p>
+                Rellena el siguiente formulario para enviarnos
+                tu consulta. Los campos marcados como
+                obligatorios deben completarse.
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <p>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre"
+                               name="nombre" required>
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" id="correo"
+                               name="correo" required>
+                    </p>
+
+                    <p>
+                        <label for="pedido">Número de pedido (opcional):</label>
+                        <input type="number" id="pedido"
+                               name="pedido" min="1">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles de la consulta</legend>
+
+                    <p>
+                        <label for="categoria">Categoría del producto:</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">Selecciona una categoría</option>
+                            <option value="videojuegos">Videojuegos</option>
+                            <option value="jcc">Juego de Cartas Coleccionables</option>
+                            <option value="mangas">Mangas</option>
+                            <option value="merchandising">Merchandising</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </p>
+
+                    <fieldset>
+                        <legend>Motivo de contacto</legend>
+
+                        <input type="radio" id="informacion"
+                               name="motivo" value="informacion" required>
+                        <label for="informacion">Información sobre productos</label>
+
+                        <input type="radio" id="pedidoConsulta"
+                               name="motivo" value="pedido">
+                        <label for="pedidoConsulta">Consulta sobre un pedido</label>
+
+                        <input type="radio" id="sugerencia"
+                               name="motivo" value="sugerencia">
+                        <label for="sugerencia">Sugerencias</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="mensaje">Escribe tu mensaje:</label>
+                        <textarea id="mensaje" name="mensaje"
+                                  rows="6" cols="40" required></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="checkbox" id="aceptar"
+                           name="aceptar" required>
+                    <label for="aceptar">
+                        Entiendo que este formulario pertenece
+                        a una tienda ficticia creada con fines educativos.
+                    </label>
+                </p>
+
+                <button type="submit">Enviar consulta</button>
+            </form>
+
+            <p>
+                Nota: este formulario es una demostración y
+                no envía mensajes reales.
+            </p>
+        </section>
+
+        <section>
+            <h2>Información de contacto</h2>
+
+            <p>
+                PokéNexo es una tienda ficticia dedicada
+                al universo Pokémon.
+            </p>
+
+            <ul>
+                <li>Correo: dfermor0501@g.educaand.es</li>
+                <li>Ubicación: Ciudad Porcelana, Teselia</li>
+                <li>Atención: de lunes a sábado</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Horario de atención</h2>
+
+            <table>
+                <caption>Horario de atención de PokéNexo</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Día</th>
+                        <th scope="col">Horario</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Lunes a viernes</td>
+                        <td>10:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sábados</td>
+                        <td>10:00 - 14:00</td>
+                    </tr>
+                    <tr>
+                        <td>Domingos</td>
+                        <td>Cerrado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>¿Los productos de PokéNexo son reales?</h3>
+            <p>
+                PokéNexo es un proyecto educativo.
+                Los productos mostrados sirven como ejemplos
+                y no se encuentran realmente a la venta.
+            </p>
+
+            <h3>¿Puedo realizar un pedido?</h3>
+            <p>
+                No. Actualmente nuestra página funciona como
+                un catálogo de demostración.
+            </p>
+
+            <h3>¿Qué productos puedo encontrar?</h3>
+            <p>
+                Nuestro catálogo incluye videojuegos,
+                cartas del JCC, mangas y merchandising
+                relacionado con Pokémon.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            PokéNexo - Proyecto educativo de Lenguajes de Marcas.
+        </p>
+        <p>
+            <a href="noticias.xml">Canal RSS de PokéNexo</a>
+        </p>
+    </footer>
+</body>
+</html>
