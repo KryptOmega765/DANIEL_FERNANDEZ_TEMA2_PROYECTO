@@ -29,7 +29,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.80);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30);
 }
 
 .marca {
@@ -85,6 +85,20 @@ h3 {
     margin-bottom: 10px;
 }
 
+#videojuegos article > h4 {
+    color: var(--color-secundario);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#videojuegos article > h5 {
+    color: var(--color-secundario);
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
 p {
     margin-bottom: 15px;
 }
@@ -106,6 +120,82 @@ section {
 #destacados article:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
+}
+
+#videojuegos article,
+#museo article,
+#jcc article,
+#manga article,
+#merchandising article {
+    background-color: var(--color-tarjeta);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#switch article,
+#switch2 article {
+    min-width: 0;
+}
+
+#switch,
+#switch2,
+#museo,
+#jcc,
+#manga,
+#merchandising {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#switch > h3,
+#switch2 > h3,
+#museo > h2,
+#jcc > h2,
+#manga > h2,
+#merchandising > h2 {
+    grid-column: 1 / -1;
+}
+
+.galeria-producto {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.galeria-producto img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    background-color: var(--color-fondo);
+    border-radius: 6px;
+    border: 3px solid var(--color-secundario);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.30);
+}
+
+.galeria-cartas,
+.galeria-mangas,
+.galeria-merchandising {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.galeria-mangas {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.galeria-cartas img,
+.galeria-mangas img,
+.galeria-merchandising img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    background-color: var(--color-fondo);
+    border: 2px solid var(--color-secundario);
+    border-radius: 6px;
 }
 
 #categorias {
@@ -153,11 +243,12 @@ section {
 }
 
 .imagen-producto {
-    max-width: 100%;
-    height: 200px;
-    object-fit: contain;
     display: block;
-    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto 20px;
 }
 
 .precio-producto {
@@ -173,6 +264,21 @@ section {
     padding: 5px 10px;
     border-radius: 6px;
     font-weight: 600;
+}
+
+.no-venta {
+    display: inline-block;
+    background-color: #E4EAF2;
+    color: var(--color-secundario);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.precio-original {
+    color: #596678;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .susurro {
@@ -210,13 +316,14 @@ footer a:hover {
 }
 
 footer a:focus-visible {
-    outline: 2ps solid var(--color-acento);
+    outline: 2px solid var(--color-acento);
     outline-offset: 4px;
 }
 
 @media (max-width: 600px) {
     #categorias,
-    #destacados {
+    #destacados,
+    #noticias {
         grid-template-columns: 1fr;
     }
     
@@ -229,5 +336,24 @@ footer a:focus-visible {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px 16px;
+    }
+
+    #switch,
+    #switch2,
+    #museo,
+    #jcc,
+    #manga,
+    #merchandising {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-producto {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .galeria-cartas,
+    .galeria-mangas,
+    .galeria-merchandising {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
