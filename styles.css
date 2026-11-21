@@ -16,7 +16,7 @@
 body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 header {
@@ -24,6 +24,11 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-secundario);
+    background-image: linear-gradient(
+        90deg,
+        var(--color-secundario) 0%,
+        var(--color-principal) 100%
+    );
     color: var(--color-tarjeta);
     padding: 20px;
     position: sticky;
@@ -65,6 +70,7 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 30px 20px;
+    animation: entradaSuave 0.6s ease-out both;
 }
 
 h1 {
@@ -121,6 +127,24 @@ section {
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#destacados #esmeralda {
+    position: relative;
+    padding-top: 55px;
+}
+
+#destacados #esmeralda .etiqueta-especial {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: var(--color-oferta);
+    color: var(--color-tarjeta);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    animation: aparecerEtiqueta 0.7s ease-out both;
 }
 
 #categorias article:hover,
@@ -318,7 +342,7 @@ section {
 
 .pagina-actualidad #dominio-delta .galeria-cartas {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin: 20px, 0;
+    margin: 20px 0;
 }
 
 .pagina-actualidad #dominio-delta .galeria-cartas img {
@@ -368,6 +392,7 @@ section {
     color: var(--color-secundario);
     padding: 6px 12px;
     border-radius: 6px;
+    border: 2px dashed var(--color-secundario);
     font-weight: 600;
 }
 
@@ -429,6 +454,90 @@ section {
     color: var(--color-secundario);
 }
 
+.pagina-contacto input[type="radio"],
+.pagina-contacto input[type="checkbox"] {
+    accent-color: var(--color-principal);
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.pagina-contacto fieldset fieldset label {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.pagina-contacto input[type="text"]:focus-visible,
+.pagina-contacto input[type="email"]:focus-visible,
+.pagina-contacto input[type="number"]:focus-visible,
+.pagina-contacto select:focus-visible,
+.pagina-contacto textarea:focus-visible {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 2px;
+}
+
+.pagina-contacto button[type="submit"] {
+    background-color: var(--color-principal);
+    color: var(--color-tarjeta);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagina-contacto button[type="submit"]:hover {
+    background-color: var(--color-secundario);
+}
+
+.pagina-contacto button[type="submit"]:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 3px;
+}
+
+.pagina-contacto table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--color-tarjeta);
+}
+
+.pagina-contacto caption {
+    text-align: left;
+    color: var(--color-secundario);
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.pagina-contacto th,
+.pagina-contacto td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #DEE5EE;
+}
+
+.pagina-contacto thead {
+    background-color: var(--color-secundario);
+    color: var(--color-tarjeta);
+}
+
+.pagina-contacto tbody tr:nth-child(even) {
+    background-color: #EAF1F8;
+}
+
+.pagina-contacto section > h3 {
+    color: var(--color-secundario);
+    font-size: 19px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-acento);
+}
+
 article a {
     color: var(--color-principal);
     font-weight: 600;
@@ -462,6 +571,35 @@ footer a:focus-visible {
     outline-offset: 4px;
 }
 
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerEtiqueta {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @media (max-width: 600px) {
     #categorias,
     #destacados,
@@ -478,6 +616,36 @@ footer a:focus-visible {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px 16px;
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .pagina-actualidad #noticias article > h3 {
+        font-size: 20px;
+    }
+
+    .pagina-contacto form {
+        padding: 16px;
+    }
+
+    .pagina-contacto fieldset {
+        padding: 12px;
+    }
+
+    .pagina-contacto th,
+    .pagina-contacto td {
+        padding: 8px 10px;
+        font-size: 14px;
     }
 
     #switch,
@@ -499,7 +667,22 @@ footer a:focus-visible {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .galeria-producto img,
+    .galeria-cartas img,
+    .galeria-mangas img,
+    .galeria-merchandising img {
+        height: 220px;
+    }
+
     .pagina-actualidad #dominio-delta .galeria-cartas {
         grid-template-columns: 1fr;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    main,
+    #destacados #esmeralda .etiqueta-especial {
+        animation: none;
     }
 }
