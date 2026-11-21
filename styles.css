@@ -500,6 +500,6 @@ footer a:focus-visible {
     }
 
     .pagina-actualidad #dominio-delta .galeria-cartas {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2r;
     }
 }
