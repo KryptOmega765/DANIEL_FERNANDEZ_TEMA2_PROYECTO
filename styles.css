@@ -16,7 +16,7 @@
 body {
     background-color: var(--color-fondo);
     background-image: linear-gradient(rgba(244, 247, 251, 0.5),
-            rgba(244, 247, 251, 0.5)), url(img/fondo-teselia.png);
+            rgba(244, 247, 251, 0.5)), url(img/fondo-teselia.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
