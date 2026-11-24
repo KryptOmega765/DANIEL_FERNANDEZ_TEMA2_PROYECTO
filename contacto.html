@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéNexo | Contacto</title>
     <meta name="description" content="Contacta con PokéNexo para resolver tus dudas sobre videojuegos, cartas, mangas y merchandising de Pokémon.">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
 <body class="pagina-contacto">
     <header>
-        PokéNexo
+        <a href="index.html" class="marca">PokéNexo</a>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
@@ -25,6 +25,7 @@
     </header>
 
     <main>
+        <div class="lectura-sencilla">
         <h1>Contacta con PokéNexo</h1>
 
         <p>
@@ -32,15 +33,18 @@
             ¿Buscas un videojuego, una carta o algún artículo
             especial de Pokémon? ¡Estamos aquí para ayudarte!
         </p>
+        </div>
 
         <section>
             <h2>Formulario de contacto</h2>
+            <div class="lectura-sencilla">
 
             <p>
                 Rellena el siguiente formulario para enviarnos
                 tu consulta. Los campos marcados como
                 obligatorios deben completarse.
             </p>
+            </div>
 
             <form action="#" method="post">
 
@@ -116,14 +120,17 @@
                 <button type="submit">Enviar consulta</button>
             </form>
 
+            <div class="lectura-sencilla">
             <p>
                 Nota: este formulario es una demostración y
                 no envía mensajes reales.
             </p>
+            </div>
         </section>
 
         <section>
             <h2>Información de contacto</h2>
+            <div class="lectura-sencilla">
 
             <p>
                 PokéNexo es una tienda ficticia dedicada
@@ -135,6 +142,7 @@
                 <li>Ubicación: Ciudad Porcelana, Teselia</li>
                 <li>Atención: de lunes a sábado</li>
             </ul>
+            </div>
         </section>
 
         <section>
@@ -169,6 +177,7 @@
 
         <section>
             <h2>Preguntas frecuentes</h2>
+            <div class="lectura-sencilla">
 
             <h3>¿Los productos de PokéNexo son reales?</h3>
             <p>
@@ -189,6 +198,7 @@
                 cartas del JCC, mangas y merchandising
                 relacionado con Pokémon.
             </p>
+            </div>
         </section>
     </main>
 
@@ -198,9 +208,15 @@
             pertenecen a sus respectivos titulares.
         </p>
         <small>&copy; 2026 PokéNexo. Todos los derechos reservados.</small>
-        <p>
-            <a href="https://kryptomega765.github.io/DANIEL_FERNANDEZ_TEMA2_PROYECTO/" target="_blank" rel="noopener">GitHub</a> 
-            <a href="noticias.xml">Canal RSS de PokéNexo</a>
+        <p class="enlaces-footer">
+            <a href="https://kryptomega765.github.io/DANIEL_FERNANDEZ_TEMA2_PROYECTO/" 
+            target="_blank" rel="noopener">
+            <img src="img/footer/github-icon.png" alt="">GitHub
+            </a> 
+            <a href="noticias.xml">
+              <img src="img/footer/rss-icon.png" alt="">
+              Canal RSS de PokéNexo
+            </a>
         </p>
     </footer>
 </body>
